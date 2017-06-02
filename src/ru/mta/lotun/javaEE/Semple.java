@@ -10,7 +10,8 @@ import java.sql.Statement;
 public class Semple {
     static DBConnect db = new DBConnect() ;
 
-    public static void main(String[] args) {
+
+    public static void PrintTop() {
         //выводим самого богатого работника
         Statement star = null;
         try {
@@ -28,6 +29,5 @@ public class Semple {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

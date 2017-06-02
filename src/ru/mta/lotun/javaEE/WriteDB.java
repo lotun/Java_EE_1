@@ -30,34 +30,10 @@ public class WriteDB {
     public WriteDB() throws SQLException {
     }
 
-    public static void main(String[] args) {
-        //System.out.println(db.getConnect());
-        //запросы
-        try {
-            Statement star = db.getConnect().createStatement();
-//            ResultSet rs = star.executeQuery("Select * from staff");
-//
-//            File file = new File("result.txt");
-//            PrintWriter pw = new PrintWriter(file);
-//
-//            while (rs.next()){
-//                String name = rs.getString("name");
-//                String lname = rs.getString("lname");
-//                int paycheck = rs.getInt("paycheck");
-//
-//                pw.println(name + " | " + lname + " | " + paycheck);
-//            }
-//            pw.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } //catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-        PreviewData();//Метод для извлечение стартовых данных
-        WriteDataBase(); //Заполняем данные в базу
-    }
+
+
     @Description("Метод для извлечение стартовых данных")
-    private static void   PreviewData(){//int dataType=0
+    public static void   PreviewData(){//int dataType=0
 
         BufferedReader fr = null; //объект файл
         String line; //каждая строка файла
@@ -97,7 +73,7 @@ public class WriteDB {
 
     }
     @Description("Метод добавление данных в базу")
-    private static void WriteDataBase(){
+    public static void WriteDataBase(){
         System.out.println("метод");
         try {
             Statement star = db.getConnect().createStatement();
