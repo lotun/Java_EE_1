@@ -52,7 +52,7 @@ public class Outpost {
 
             if(star.executeUpdate("UPDATE staff SET password='"+hP2+"'  WHERE  login = 'misha'")>0)
                 System.out.println("Пользователю misha пароль успешно изменен");
-
+        star.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -76,6 +76,7 @@ public class Outpost {
 
                 System.out.println(id + " | " + name + " | " + lname + " | " + post + " | " + paycheck + " | " + login);
             }
+            star.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

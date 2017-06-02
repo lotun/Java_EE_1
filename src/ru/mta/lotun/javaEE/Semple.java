@@ -26,6 +26,7 @@ public class Semple {
 
                 System.out.println(name + " | " + lname + " | " + post + " | " + paycheck + " | " + login);
             }
+            star.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }

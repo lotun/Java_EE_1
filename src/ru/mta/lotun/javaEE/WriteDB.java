@@ -62,7 +62,7 @@ public class WriteDB {
                     mass.add(newUser);
 
                 }
-
+            fr.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -92,7 +92,7 @@ public class WriteDB {
                 //несение записи в базу
                 star.executeUpdate("insert into staff(name,lname,pos_id,paycheck,login,password) values('"+w.get(0)+"','"+w.get(1)+"',"+w.get(2)+","+w.get(3)+",'"+w.get(4)+"','"+w.get(5)+"')");         //("Select * from staff");
             }
-
+            star.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
